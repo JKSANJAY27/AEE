@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Marquee from '../components/Marquee'
-import { ArrowRight, Zap } from 'lucide-react'
+import { Zap } from 'lucide-react'
 
 export default function Hero() {
   const headlineRef = useRef<HTMLHeadingElement>(null)
