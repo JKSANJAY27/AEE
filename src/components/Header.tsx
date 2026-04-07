@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Achievements', href: '#achievements' },
-  { label: 'Projects', href: '#projects' },
   { label: 'Events', href: '#events' },
-  { label: 'Blog', href: '#blog' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'H2X', href: '#h2x' },
   { label: 'Sponsors', href: '#sponsors' },
+  { label: 'Dispatch', href: '#blog' },
+  { label: 'Team', href: '#team' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Join Us', href: '#contact' },
 ]

@@ -1,45 +1,7 @@
 import { useEffect, useRef } from 'react'
 import SectionLabel from '../components/SectionLabel'
-import { ArrowRight, Users, Target, TrendingUp, Globe, FileText, Star } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
-const benefits = [
-  {
-    n: '01',
-    icon: Users,
-    title: 'Direct Access to 200+ Future Engineers',
-    body: 'Your brand reaches a highly engaged pool of 200+ engineering students actively pursuing careers in energy, sustainability, and infrastructure — the exact talent pipeline you need.',
-  },
-  {
-    n: '02',
-    icon: Target,
-    title: 'Precision Brand Placement',
-    body: 'Logo visibility across all chapter events, newsletters, website, LinkedIn posts, and social media — ensuring consistent brand exposure throughout the academic year.',
-  },
-  {
-    n: '03',
-    icon: TrendingUp,
-    title: 'Talent Acquisition Pipeline',
-    body: 'Priority access to internship and placement announcements. Conduct exclusive technical talks, webinars, and campus drives directly through our chapter network.',
-  },
-  {
-    n: '04',
-    icon: Globe,
-    title: 'AEE Global Association Alignment',
-    body: 'Your sponsorship aligns with the globally respected AEE brand — signalling your commitment to energy excellence and sustainability to 18,000+ professionals worldwide.',
-  },
-  {
-    n: '05',
-    icon: FileText,
-    title: 'Newsletter & Research Co-Branding',
-    body: 'Feature in our award-winning chapter newsletter, joint white papers, and energy research reports distributed to the AEE global network and VIT faculty.',
-  },
-  {
-    n: '06',
-    icon: Star,
-    title: 'Custom Partnership Packages',
-    body: 'From event naming rights to scholarship sponsorships — we co-design partnership packages tailored to your CSR goals, recruitment needs, and brand objectives.',
-  },
-]
 
 const tiers = [
   { name: 'Platinum', price: '₹2,00,000', perks: ['Event Naming Rights', 'Premium Logo Placement', 'Keynote Speaking Slot', 'Dedicated Newsletter Feature', 'Campus Recruitment Drive', 'Research Co-Branding'], highlight: true },
@@ -102,39 +64,10 @@ export default function WhySponsorUs() {
         </div>
       </div>
 
-      {/* Benefits grid */}
       <div className="w-full">
         <div className="border-b border-[#111111]">
-          <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {benefits.map((b, i) => {
-              const Icon = b.icon
-              const col = i % 3
-              const row = Math.floor(i / 3)
-              const totalRows = Math.ceil(benefits.length / 3)
-              return (
-                <div
-                  key={b.n}
-                  className={`benefit-item reveal p-6 flex flex-col gap-3
-                    ${col < 2 ? 'border-r border-[#111111]' : ''}
-                    ${row < totalRows - 1 ? 'border-b border-[#111111]' : ''}
-                    group hover:bg-[#F5F5F5] transition-colors
-                  `}
-                >
-                  <div className="flex items-start gap-3">
-                    <span className="font-mono font-bold text-2xl text-[#CC0000]">{b.n}</span>
-                    <div className="w-10 h-10 border border-[#111111] flex items-center justify-center group-hover:bg-[#111111] group-hover:text-[#F9F9F7] transition-all">
-                      <Icon size={16} strokeWidth={1.5} />
-                    </div>
-                  </div>
-                  <h3 className="font-serif font-bold text-lg leading-tight">{b.title}</h3>
-                  <p className="font-body text-sm leading-relaxed text-[#525252]">{b.body}</p>
-                </div>
-              )
-            })}
-          </div>
-
           {/* Sponsorship Tiers */}
-          <div className="border-t border-[#111111]">
+          <div>
             <div className="border-b border-[#111111] px-8 py-3">
               <span className="section-label text-[#737373]">Sponsorship Tiers — 2025–26</span>
             </div>
@@ -170,7 +103,6 @@ export default function WhySponsorUs() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

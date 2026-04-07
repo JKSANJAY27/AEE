@@ -1,8 +1,5 @@
 import Header from './components/Header'
 import Hero from './sections/Hero'
-import About from './sections/About'
-import Achievements from './sections/Achievements'
-import Team from './sections/Team'
 import Events from './sections/Events'
 import Projects from './sections/Projects'
 import Blog from './sections/Blog'
@@ -11,6 +8,8 @@ import WhySponsorUs from './sections/WhySponsorUs'
 import Gallery from './sections/Gallery'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
+import Team from './sections/Team'
+import H2X from './sections/H2X'
 
 export default function App() {
   return (
@@ -24,28 +23,26 @@ export default function App() {
           
           <Hero />
           
-          <About />
-          
-          <div className="border-t-[4px] border-[#111111]" />
-          <Achievements />
-          
-          <div className="border-t-[4px] border-[#111111]" />
-          <Team />
-          
           <div className="border-t-[4px] border-[#111111]" />
           <Events />
           
           <div className="border-t-[4px] border-[#111111]" />
           <Projects />
-          
+
           <div className="border-t-[4px] border-[#111111]" />
-          <Blog />
+          <H2X />
           
           <div className="border-t-[4px] border-[#111111]" />
           <Sponsors />
           
           <div className="border-t-[4px] border-[#111111]" />
           <WhySponsorUs />
+
+          <div className="border-t-[4px] border-[#111111]" />
+          <Blog />
+          
+          <div className="border-t-[4px] border-[#111111]" />
+          <Team />
           
           <div className="border-t-[4px] border-[#111111]" />
           <Gallery />

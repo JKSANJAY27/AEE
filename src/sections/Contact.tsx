@@ -39,7 +39,6 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12">
 
-            {/* Form */}
             <div className="lg:col-span-7 border-b lg:border-b-0 lg:border-r border-[#111111] p-6 lg:p-10">
               {submitted ? (
                 <div ref={ref} className="reveal flex flex-col items-center justify-center h-full gap-4 py-16">
@@ -48,31 +47,12 @@ export default function Contact() {
                   </div>
                   <h3 className="font-serif font-bold text-2xl text-center">Submission Received</h3>
                   <p className="font-body text-sm text-[#525252] text-center max-w-xs leading-relaxed">
-                    Thank you for reaching out. Our team will get back to you within 48 hours.
+                    Thank you for reaching out. We have saved your details for future reference.
                   </p>
                   <span className="font-mono text-[10px] text-[#A3A3A3] uppercase tracking-widest">— The AEE VIT Team</span>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                  <div>
-                    <p className="section-label text-[#737373] mb-4">I am reaching out as a —</p>
-                    <div className="flex gap-0">
-                      {['member', 'sponsor', 'collaborator'].map(t => (
-                        <button
-                          key={t}
-                          type="button"
-                          onClick={() => setForm({ ...form, type: t })}
-                          className={`flex-1 py-2 px-3 font-mono text-[10px] uppercase tracking-widest border transition-all
-                            ${form.type === t
-                              ? 'bg-[#111111] text-[#F9F9F7] border-[#111111]'
-                              : 'bg-transparent text-[#737373] border-[#E5E5E0] hover:border-[#111111] hover:text-[#111111]'
-                            }`}
-                        >
-                          {t}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
@@ -86,50 +66,38 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="section-label text-[#737373] block mb-1">Email Address *</label>
+                      <label className="section-label text-[#737373] block mb-1">WhatsApp Number *</label>
+                      <input
+                        required
+                        type="tel"
+                        className="input-news"
+                        placeholder="+91"
+                      />
+                    </div>
+                    <div>
+                      <label className="section-label text-[#737373] block mb-1">Personal Email *</label>
                       <input
                         required
                         type="email"
                         className="input-news"
-                        placeholder="you@vit.ac.in"
+                        placeholder="you@gmail.com"
                         value={form.email}
                         onChange={e => setForm({ ...form, email: e.target.value })}
                       />
                     </div>
                     <div>
-                      <label className="section-label text-[#737373] block mb-1">Department</label>
+                      <label className="section-label text-[#737373] block mb-1">VIT Email *</label>
                       <input
+                        required
+                        type="email"
                         className="input-news"
-                        placeholder="e.g. Electrical Engineering"
-                        value={form.dept}
-                        onChange={e => setForm({ ...form, dept: e.target.value })}
-                      />
-                    </div>
-                    <div>
-                      <label className="section-label text-[#737373] block mb-1">Year of Study</label>
-                      <input
-                        className="input-news"
-                        placeholder="e.g. 2nd Year"
-                        value={form.year}
-                        onChange={e => setForm({ ...form, year: e.target.value })}
+                        placeholder="you@vitstudent.ac.in"
                       />
                     </div>
                   </div>
 
-                  <div>
-                    <label className="section-label text-[#737373] block mb-1">Message</label>
-                    <textarea
-                      className="input-news resize-none"
-                      rows={4}
-                      placeholder="Tell us why you'd like to join or collaborate..."
-                      value={form.message}
-                      onChange={e => setForm({ ...form, message: e.target.value })}
-                      style={{ borderBottom: '2px solid #111111', borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}
-                    />
-                  </div>
-
-                  <button type="submit" className="btn-primary self-start flex items-center gap-2">
-                    Submit <Send size={14} strokeWidth={1.5} />
+                  <button type="submit" className="btn-primary self-start flex items-center gap-2 mt-4">
+                    Submit Details <Send size={14} strokeWidth={1.5} />
                   </button>
                 </form>
               )}

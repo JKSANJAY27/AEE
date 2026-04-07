@@ -42,7 +42,7 @@ export default function Team() {
           <div className="border-b border-[#111111] p-8">
             <SectionLabel
               tag="§ 03 — Leadership"
-              title="The Editorial Board"
+              title="Our Team"
               subtitle="Meet the students driving AEE VIT's mission across technical, editorial, and outreach domains."
             />
           </div>

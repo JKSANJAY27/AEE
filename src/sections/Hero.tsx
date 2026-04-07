@@ -19,18 +19,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="w-full bg-white">
-      {/* Top metadata bar overlay */}
-      <div className="border-b border-[#111111] bg-white flex items-center justify-between py-2 px-6">
-        <div className="flex items-center gap-3">
-          <span className="badge-breaking">Breaking</span>
-          <span className="font-mono text-[11px] uppercase tracking-widest text-[#525252]">
-            2024 AEE Best Overall Chapter — International
-          </span>
-        </div>
-        <span className="font-mono text-[11px] text-[#737373] hidden md:block uppercase tracking-widest">
-          {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
-        </span>
-      </div>
+
 
       {/* Main hero grid */}
       <div className="w-full border-b border-[#111111] newsprint-texture">
@@ -109,26 +98,34 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Quick facts */}
-            <div className="p-8 flex flex-col gap-4 flex-1">
-              <p className="section-label text-[#737373] mb-2">Chapter At a Glance</p>
-              {[
-                { label: 'Founded', value: '2018' },
-                { label: 'Location', value: 'VIT Vellore, TN' },
-                { label: 'Affiliation', value: 'AEE Global' },
-                { label: 'Focus Area', value: 'Energy Efficiency' },
-                { label: 'Members', value: '200+ Students' },
-              ].map(({ label, value }) => (
-                <div key={label} className="flex justify-between items-baseline border-b border-[#E5E5E0] pb-3">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-[#737373]">{label}</span>
-                  <span className="font-sans font-semibold text-xs text-[#111111]">{value}</span>
+            {/* Featured Image Fill */}
+            <div className="flex-1 relative overflow-hidden group min-h-[300px] border-b border-[#111111]">
+              <img 
+                src="/pic4.jpeg" 
+                alt="AEE VIT Members in Action" 
+                className="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent opacity-80" />
+              
+              {/* Halftone dot overlay for texture */}
+              <div
+                className="absolute inset-0 opacity-10"
+                style={{
+                  backgroundImage: 'radial-gradient(#000 1px, transparent 1px)',
+                  backgroundSize: '4px 4px',
+                }}
+              />
+              
+              <div className="absolute bottom-0 left-0 p-8 z-10 w-full">
+                <div className="border-l-2 border-[#CC0000] pl-4">
+                  <p className="font-mono text-[10px] text-[#A3A3A3] tracking-widest uppercase mb-1">
+                    In Action
+                  </p>
+                  <p className="font-serif text-lg text-[#F9F9F7] leading-tight">
+                    Driving energy innovation on campus and beyond
+                  </p>
                 </div>
-              ))}
-            </div>
-
-            {/* Bottom ornament */}
-            <div className="border-t border-[#111111] py-6 flex justify-center text-[#A3A3A3]">
-               ✦ ✦ ✦ 
+              </div>
             </div>
           </div>
 
