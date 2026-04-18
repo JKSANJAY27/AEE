@@ -2,14 +2,7 @@ import { useEffect, useRef } from 'react'
 import SectionLabel from '../components/SectionLabel'
 
 const sponsors = [
-  { name: 'NTPC Limited', category: 'Platinum', abbr: 'NTPC' },
-  { name: 'Tata Power', category: 'Platinum', abbr: 'TATA\nPWR' },
-  { name: 'BHEL', category: 'Gold', abbr: 'BHEL' },
-  { name: 'Schneider Electric', category: 'Gold', abbr: 'SE' },
-  { name: 'Adani Green Energy', category: 'Gold', abbr: 'AGEL' },
-  { name: 'L&T Construction', category: 'Silver', abbr: 'L&T' },
-  { name: 'Havells India', category: 'Silver', abbr: 'HVLS' },
-  { name: 'ABB India', category: 'Silver', abbr: 'ABB' },
+  { name: 'Safe Express', category: 'Platinum', image: '/Safe Express.png' },
 ]
 
 const tierColors: Record<string, { border: string; label: string; bg: string }> = {
@@ -85,10 +78,18 @@ export default function Sponsors() {
                     </span>
                   </div>
 
-                  {/* Logo placeholder */}
-                  <span className="font-serif font-black text-2xl text-[#A3A3A3] group-hover:text-[#F9F9F7] transition-colors whitespace-pre-line text-center leading-tight">
-                    {s.abbr}
-                  </span>
+                  {/* Logo or placeholder */}
+                  {s.image ? (
+                    <img 
+                      src={s.image} 
+                      alt={s.name} 
+                      className="max-w-[70%] max-h-[60%] object-contain grayscale invert hover:invert-0 transition-all duration-300"
+                    />
+                  ) : (
+                    <span className="font-serif font-black text-2xl text-[#A3A3A3] group-hover:text-[#F9F9F7] transition-colors whitespace-pre-line text-center leading-tight">
+                      {s.name}
+                    </span>
+                  )}
 
                   {/* Company name on hover */}
                   <div className="absolute inset-x-0 bottom-3 text-center opacity-0 group-hover:opacity-100 transition-opacity">
