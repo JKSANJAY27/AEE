@@ -62,7 +62,8 @@ export default function Footer() {
                 {[
                   { label: 'in', title: 'LinkedIn', href: 'https://linkedin.com/company/aee-vit' },
                   { label: 'ig', title: 'Instagram', href: '#' },
-                  { label: 'x', title: 'Twitter', href: '#' },
+                  { label: 'yt', title: 'YouTube', href: '#' },
+                  { label: 'md', title: 'Medium', href: 'https://medium.com/@aee-vit' },
                   { label: '✉', title: 'Email', href: 'mailto:aee@vit.ac.in' },
                 ].map(({ label, title, href }) => (
                   <a

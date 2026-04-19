@@ -5,11 +5,6 @@ const sponsors = [
   { name: 'Safe Express', category: 'Platinum', image: '/Safe Express.png' },
 ]
 
-const tierColors: Record<string, { border: string; label: string; bg: string }> = {
-  Platinum: { border: 'border-[#111111]', label: 'text-[#111111]', bg: 'bg-[#F9F9F7]' },
-  Gold: { border: 'border-[#525252]', label: 'text-[#525252]', bg: 'bg-[#F9F9F7]' },
-  Silver: { border: 'border-[#E5E5E0]', label: 'text-[#A3A3A3]', bg: 'bg-[#FAFAFA]' },
-}
 
 export default function Sponsors() {
   const ref = useRef<HTMLDivElement>(null)
@@ -44,14 +39,6 @@ export default function Sponsors() {
               title="Our Partners"
               subtitle="Organisations that empower AEE VIT's mission through financial and technical support."
             />
-            <div className="flex gap-4">
-              {['Platinum', 'Gold', 'Silver'].map((tier) => (
-                <div key={tier} className="flex items-center gap-1.5">
-                  <div className={`w-2 h-2 border ${tierColors[tier].border}`} />
-                  <span className={`font-mono text-[10px] uppercase tracking-wider ${tierColors[tier].label}`}>{tier}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Logo Grid */}
@@ -60,7 +47,6 @@ export default function Sponsors() {
               const col = i % 4
               const row = Math.floor(i / 4)
               const totalRows = Math.ceil(sponsors.length / 4)
-              const t = tierColors[s.category]
               return (
                 <div
                   key={s.name}
@@ -71,12 +57,7 @@ export default function Sponsors() {
                     hover:bg-[#111111]
                   `}
                 >
-                  {/* Tier label */}
-                  <div className="absolute top-3 left-3">
-                    <span className={`font-mono text-[8px] uppercase tracking-[0.2em] ${t.label} group-hover:text-[#A3A3A3]`}>
-                      {s.category}
-                    </span>
-                  </div>
+                  {/* Removed Tier label */}
 
                   {/* Logo or placeholder */}
                   {s.image ? (
@@ -107,11 +88,11 @@ export default function Sponsors() {
               <p className="font-mono text-[10px] text-[#737373] mt-0.5">Reach 200+ future energy engineers</p>
             </div>
             <a
-              href="#why-sponsor"
-              onClick={(e) => { e.preventDefault(); document.getElementById('why-sponsor')?.scrollIntoView({ behavior: 'smooth' }) }}
+              href="#contact"
+              onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }}
               className="btn-primary shrink-0"
             >
-              View Sponsorship Tiers
+              Contact Us
             </a>
           </div>
 

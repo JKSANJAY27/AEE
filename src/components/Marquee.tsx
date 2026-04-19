@@ -4,9 +4,7 @@ const items = [
   { label: 'Events Conducted', value: '50+' },
   { label: 'Best Newsletter', value: '2022 — AEE Award' },
   { label: 'Years Active', value: 'Est. 2018' },
-  { label: 'Industry Partners', value: '15+' },
   { label: 'Workshops Held', value: '30+' },
-  { label: 'Chapters Worldwide', value: 'AEE Global Network' },
 ]
 
 export default function Marquee() {

@@ -36,10 +36,10 @@ export default function Hero() {
                 ref={headlineRef}
                 className="font-serif font-black text-6xl sm:text-7xl xl:text-[8.5rem] leading-[0.85] tracking-tighter text-[#111111]"
               >
-                Powering<br />
-                <span className="italic font-normal">Tomorrow's</span><br />
-                Energy<br />
-                Leaders.
+                Working<br />
+                <span className="italic font-normal">towards a</span><br />
+                sustainable<br />
+                future.
               </h1>
             </div>
 

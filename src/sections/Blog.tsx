@@ -63,6 +63,14 @@ export default function Blog() {
                 <button className="btn-primary w-full justify-center gap-2">
                   Subscribe <ArrowRight size={14} strokeWidth={1.5} />
                 </button>
+                <a 
+                  href="https://drive.google.com/drive/folders/125FAcF1kRYBkaazHyKShKLgAW5njZ9O6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline w-full justify-center gap-2 text-center"
+                >
+                  Repository <ArrowRight size={14} strokeWidth={1.5} />
+                </a>
               </div>
             </div>
 

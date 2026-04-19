@@ -5,10 +5,10 @@ import { ArrowRight } from 'lucide-react'
 const projects = [
   {
     id: 'P01',
-    tag: 'Technical Quiz',
-    title: 'Quisergy',
-    desc: 'An intensive technical quiz series focused on core energy domains — testing knowledge and fostering competitive excellence within our chapter.',
-    status: 'Ongoing',
+    tag: 'Research',
+    title: 'LCA of Solar PV',
+    desc: 'Life Cycle Assessment of solar photovoltaic systems evaluating environmental impacts across all stages, including raw material extraction, manufacturing, operation, and end-of-life, with focus on energy payback, carbon footprint, and overall sustainability performance.',
+    status: 'Completed',
     year: '2025',
   },
 ]

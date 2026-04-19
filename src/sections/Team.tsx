@@ -2,16 +2,16 @@ import { useEffect, useRef } from 'react'
 import SectionLabel from '../components/SectionLabel'
 
 const team = [
-  { name: 'Pranav Raj V', role: 'Chairperson', dept: '23BME0090', fig: '1.1', initials: 'PR', image: '/Pranav Raj V.jpeg' },
-  { name: 'Vipul Kumar Rout', role: 'Secretary', dept: '23BME0031', fig: '1.2', initials: 'VR', image: '/Vipul Kumar Rout.jpeg' },
-  { name: 'Shreeshankar S', role: 'Vice Chairperson', dept: '24BME0472', fig: '1.3', initials: 'SS', image: '/Shreeshankar S.jpeg' },
-  { name: 'Mohnish Ram D', role: 'Co-Secretary', dept: '24BME0566', fig: '1.4', initials: 'MD', image: '/Mohnish Ram D.jpeg' },
-  { name: 'Hari Tharun N', role: 'Technical Lead', dept: '24BME0756', fig: '1.5', initials: 'HN', image: '/Hari Tharun N.jpeg' },
-  { name: 'Sanjay J K', role: 'Design Lead', dept: '23BCE2028', fig: '1.6', initials: 'SK', image: '/Sanjay J K.jpeg' },
-  { name: 'Rishab Ramesh', role: 'Events Lead', dept: '23BME0075', fig: '1.7', initials: 'RR', image: '/Rishab Ramesh.jpeg' },
-  { name: 'Abhinav Maurya', role: 'Editorial Lead', dept: '24BME0717', fig: '1.8', initials: 'AM', image: '/Abhinav Maurya.jpeg' },
-  { name: 'Aarushi Mehrotra', role: 'Creative Lead', dept: '24BCM0262', fig: '1.9', initials: 'AM', image: '/Aarushi Mehrotra.jpeg' },
-  { name: 'Vatsal Chitlangia', role: 'Management Lead', dept: '24BMM0038', fig: '1.10', initials: 'VC', image: null },
+  { name: 'Pranav Raj V', role: 'Chairperson', linkedin: 'https://www.linkedin.com/in/pranav-raj-vr/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.1', initials: 'PR', image: '/Pranav Raj V.jpeg' },
+  { name: 'Vipul Kumar Rout', role: 'Secretary', linkedin: 'https://www.linkedin.com/in/vipul-kumar-rout-b4603636a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.2', initials: 'VR', image: '/Vipul Kumar Rout.jpeg' },
+  { name: 'Shreeshankar S', role: 'Vice Chairperson', linkedin: 'https://www.linkedin.com/in/shreeshankar-s/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.3', initials: 'SS', image: '/Shreeshankar S.jpeg' },
+  { name: 'Mohnish Ram D', role: 'Co-Secretary', linkedin: 'https://www.linkedin.com/in/mohnish-ram-d-n-142b0b22b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.4', initials: 'MD', image: '/Mohnish Ram D.jpeg' },
+  { name: 'Hari Tharun N', role: 'Technical Lead', linkedin: 'https://www.linkedin.com/in/hari-tharun-n-0253a1321/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.5', initials: 'HN', image: '/Hari Tharun N.jpeg' },
+  { name: 'Sanjay J K', role: 'Design Lead', linkedin: 'https://www.linkedin.com/in/sanjay-j-k/', fig: '1.6', initials: 'SK', image: '/Sanjay J K.jpeg' },
+  { name: 'Rishab Ramesh', role: 'Events Lead', linkedin: 'https://www.linkedin.com/in/rishabramesh/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.7', initials: 'RR', image: '/Rishab Ramesh.jpeg' },
+  { name: 'Abhinav Maurya', role: 'Editorial Lead', linkedin: 'https://www.linkedin.com/in/abhinav-maurya-334528321/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.8', initials: 'AM', image: '/Abhinav Maurya.jpeg' },
+  { name: 'Aarushi Mehrotra', role: 'Creative Lead', linkedin: 'https://www.linkedin.com/in/aarushi-mehrotra-664092212/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.9', initials: 'AM', image: '/Aarushi Mehrotra.jpeg' },
+  { name: 'Vatsal Chitlangia', role: 'Management Lead', linkedin: 'https://www.linkedin.com/in/vatsal-chitlangia/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.10', initials: 'VC', image: null },
 ]
 
 export default function Team() {
@@ -96,7 +96,9 @@ export default function Team() {
                   <div className="p-4 flex-1 flex flex-col gap-1">
                     <div className="section-label text-[#CC0000]">{member.role}</div>
                     <h3 className="font-serif font-bold text-base leading-tight">{member.name}</h3>
-                    <p className="font-mono text-[10px] text-[#737373] mt-auto uppercase">{member.dept}</p>
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-[#737373] hover:text-[#CC0000] transition-colors mt-auto uppercase w-max">
+                      LINKEDIN ↗
+                    </a>
                     <div className="border-t border-[#E5E5E0] mt-2 pt-1">
                       <span className="font-mono text-[9px] text-[#A3A3A3] tracking-widest">Fig. {member.fig}</span>
                     </div>
