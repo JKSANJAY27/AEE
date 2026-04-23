@@ -7,6 +7,7 @@ const photos = [
   { id: 'G09', image: '/pic9.jpeg'},
   { id: 'G10', image: '/pic10.jpeg'},
   { id: 'G11', image: '/pic11.jpeg' },
+  { id: 'G12', image: '/pic12.jpeg' },
   { id: 'G01', image: '/pic1.jpeg' },
   { id: 'G03', image: '/pic3.jpeg' },
   { id: 'G04', image: '/pic4.jpeg' },
