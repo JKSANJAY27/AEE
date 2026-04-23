@@ -3,7 +3,7 @@ import SectionLabel from '../components/SectionLabel'
 
 const team = [
   { name: 'Dr. Sakthivadivel D', role: 'Faculty Coordinator', linkedin: 'https://www.linkedin.com/in/sakthivadivel-d-03836038/?originalSubdomain=in', fig: '0.1', initials: 'SDK', image: null },
-  { name: 'Pranav Raj V', role: 'Chairperson', linkedin: 'https://www.linkedin.com/in/pranav-raj-vr/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.1', initials: 'PR', image: '/Pranav Raj V.jpeg' },
+  { name: 'Pranav Raj V R', role: 'Chairperson', linkedin: 'https://www.linkedin.com/in/pranav-raj-vr/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.1', initials: 'PR', image: '/Pranav Raj V.jpeg' },
   { name: 'Vipul Kumar Rout', role: 'Secretary', linkedin: 'https://www.linkedin.com/in/vipul-kumar-rout-b4603636a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.2', initials: 'VR', image: '/Vipul Kumar Rout.jpeg' },
   { name: 'Shreeshankar S', role: 'Vice Chairperson', linkedin: 'https://www.linkedin.com/in/shreeshankar-s/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.3', initials: 'SS', image: '/Shreeshankar S.jpeg' },
   { name: 'Mohnish Ram D', role: 'Co-Secretary', linkedin: 'https://www.linkedin.com/in/mohnish-ram-d-n-142b0b22b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU93v4MhtQZ2YYwNlh7TDYg%3D%3D', fig: '1.4', initials: 'MD', image: '/Mohnish Ram D.jpeg' },
