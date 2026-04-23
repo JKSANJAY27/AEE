@@ -40,7 +40,7 @@ export default function Header() {
               Vol. VII &nbsp;|&nbsp; Est. 2018 &nbsp;|&nbsp; Vellore Edition
             </span>
             <span className="font-mono text-[9px] tracking-widest uppercase text-[#525252]">
-              AEE Global Chapter &nbsp;·&nbsp; VIT Vellore
+              AEE Student Chapter &nbsp;·&nbsp; VIT Vellore
             </span>
           </div>
 

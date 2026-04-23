@@ -47,7 +47,7 @@ export default function WhySponsorUs() {
                 {[
                   { n: '200+', label: 'Engineering Students Reached' },
                   { n: '#1', label: 'AEE Chapter Globally (2024)' },
-                  { n: '50+', label: 'Industry Events Per Year' },
+                  { n: '25+', label: 'Technical Events Per Year' },
                 ].map(({ n, label }) => (
                   <div key={label} className="flex items-baseline gap-3 border-b border-[#404040] pb-3">
                     <span className="font-mono font-black text-3xl text-[#CC0000]">{n}</span>

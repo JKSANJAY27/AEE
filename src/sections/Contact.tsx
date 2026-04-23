@@ -75,7 +75,7 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="section-label text-[#737373] block mb-1">Personal Email *</label>
+                      <label className="section-label text-[#737373] block mb-1">Email *</label>
                       <input
                         required
                         type="email"
@@ -86,9 +86,8 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="section-label text-[#737373] block mb-1">VIT Email *</label>
+                      <label className="section-label text-[#737373] block mb-1">University Email</label>
                       <input
-                        required
                         type="email"
                         className="input-news"
                         placeholder="you@vitstudent.ac.in"
@@ -139,7 +138,8 @@ export default function Contact() {
                   {[
                     { label: 'in', title: 'LinkedIn', href: 'https://linkedin.com/company/aee-vit' },
                     { label: 'ig', title: 'Instagram', href: '#' },
-                    { label: 'x', title: 'Twitter / X', href: '#' },
+                    { label: 'yt', title: 'YouTube', href: 'https://www.youtube.com/@AEE-VIT' },
+                    { label: 'md', title: 'Medium', href: 'https://medium.com/@aee-vit' },
                   ].map(({ label, title, href }) => (
                     <a
                       key={title}

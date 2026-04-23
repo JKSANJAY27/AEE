@@ -1,7 +1,7 @@
 const items = [
   { label: 'Best Overall Chapter', value: '2024 — International Award' },
   { label: 'Members', value: '200+' },
-  { label: 'Events Conducted', value: '50+' },
+  { label: 'Events Conducted', value: '25+' },
   { label: 'Best Newsletter', value: '2022 — AEE Award' },
   { label: 'Years Active', value: 'Est. 2018' },
   { label: 'Workshops Held', value: '30+' },
