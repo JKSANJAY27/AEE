@@ -2,6 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import SectionLabel from '../components/SectionLabel'
 
 const photos = [
+  { id: 'G07', image: '/pic7.jpeg', featured: true },
+  { id: 'G08', image: '/pic8.jpeg', featured: true },
+  { id: 'G09', image: '/pic9.jpeg', featured: true },
+  { id: 'G10', image: '/pic10.jpeg', featured: true },
+  { id: 'G11', image: '/pic11.jpeg' },
   { id: 'G01', image: '/pic1.jpeg' },
   { id: 'G02', image: '/pic2.jpeg' },
   { id: 'G03', image: '/pic3.jpeg' },
@@ -63,14 +68,27 @@ export default function Gallery() {
                   <div
                     key={photo.id}
                     onClick={() => setSelectedPhoto(photo.image)}
-                    className="gallery-item reveal relative overflow-hidden group cursor-pointer inline-block w-full border-[0.5px] border-[#111111] m-0 p-0"
+                    className={`gallery-item reveal relative overflow-hidden group cursor-pointer inline-block w-full border-[0.5px] border-[#111111] m-0 p-0
+                      ${photo.featured ? 'ring-1 ring-inset ring-[#CC0000]/30' : ''}
+                    `}
                     style={{ marginBottom: '-6px' }} // Negates inline-block default gap
                   >
+                    {/* Featured Tag */}
+                    {photo.featured && (
+                      <div className="absolute top-3 left-3 z-10">
+                        <div className="bg-[#CC0000] text-white font-mono text-[8px] px-2 py-0.5 uppercase tracking-[0.2em] shadow-sm">
+                          Featured
+                        </div>
+                      </div>
+                    )}
+
                     {/* Native image scale for 0-cropping */}
                     <img 
                       src={photo.image}
                       alt={photo.id}
-                      className="w-full h-auto block transition-all duration-500 group-hover:scale-[1.02] grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100"
+                      className={`w-full h-auto block transition-all duration-500 group-hover:scale-[1.02]
+                        ${photo.featured ? 'grayscale-[0.5] brightness-90 group-hover:grayscale-0 group-hover:brightness-100' : 'grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100'}
+                      `}
                     />
 
                     {/* Halftone dot overlay */}

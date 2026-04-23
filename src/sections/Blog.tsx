@@ -115,9 +115,14 @@ export default function Blog() {
                 Listen to our latest episodes featuring conversations with innovators in energy efficiency and clean tech.
               </p>
               <div className="border-t border-[#E5E5E0] pt-6 flex flex-col gap-3">
-                <button className="btn-outline w-full justify-center gap-2 text-[#737373] border-[#E5E5E0] cursor-not-allowed">
-                  Coming Soon
-                </button>
+                <a 
+                  href="https://youtube.com/playlist?list=PLdraf2DGkKEmJPAT2Rfd_SYGQ9La7j9nQ&si=MCiu1O5Gu_VmCKbF"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline w-full justify-center gap-2 text-center"
+                >
+                  Listen on YouTube <ArrowRight size={14} strokeWidth={1.5} />
+                </a>
               </div>
             </div>
 

@@ -137,7 +137,7 @@ export default function Contact() {
                 <div className="flex gap-2">
                   {[
                     { label: 'in', title: 'LinkedIn', href: 'https://linkedin.com/company/aee-vit' },
-                    { label: 'ig', title: 'Instagram', href: '#' },
+                    { label: 'ig', title: 'Instagram', href: 'https://www.instagram.com/aee.vit/?hl=en' },
                     { label: 'yt', title: 'YouTube', href: 'https://www.youtube.com/@AEE-VIT' },
                     { label: 'md', title: 'Medium', href: 'https://medium.com/@aee-vit' },
                   ].map(({ label, title, href }) => (
