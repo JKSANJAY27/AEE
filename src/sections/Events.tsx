@@ -2,13 +2,21 @@ import { useEffect, useRef } from 'react'
 import SectionLabel from '../components/SectionLabel'
 import { Calendar, ExternalLink } from 'lucide-react'
 
-const events = [
+interface EventItem {
+  tag?: string
+  title: string
+  date: string
+  desc?: string
+  upcoming: boolean
+  link?: string
+}
+
+const events: EventItem[] = [
   {
-    tag: 'HACKATHON',
-    title: 'EnergyThon',
-    date: 'Date: TBA',
-    desc: 'EnergyThon is an annual ideathon and hackathon by AEE-VIT during Gravitas, focusing on innovative, practical solutions to contemporary energy challenges.',
+    title: 'Drone Soccer',
+    date: '18 September 2026',
     upcoming: true,
+    link: 'https://gravitas.vit.ac.in/events/4c37c796-85e4-4df0-ae28-98481b7b196c',
   },
   {
     tag: 'WORKSHOP',
@@ -83,30 +91,42 @@ export default function Events() {
                 <div className="w-2 h-2 bg-[#CC0000] animate-pulse" />
                 <span className="font-mono text-[10px] tracking-widest uppercase text-[#A3A3A3]">Upcoming</span>
               </div>
-              {upcoming.map((ev) => (
-                <div
-                  key={ev.title}
-                  className="border-b border-[#111111] last:border-b-0 p-6 flex flex-col lg:flex-row gap-4 lg:items-start hover:bg-[#F5F5F5] transition-colors group cursor-pointer"
-                >
-                  <div className="lg:w-32 shrink-0">
-                    <span className={`font-mono text-[10px] px-2 py-1 ${tagColors[ev.tag] || 'border border-[#111111] text-[#111111]'}`}>
-                      {ev.tag}
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif font-bold text-xl group-hover:text-[#CC0000] transition-colors leading-tight mb-2">
-                      {ev.title}
-                    </h3>
-                    <p className="font-body text-sm text-[#525252] leading-relaxed mb-3">{ev.desc}</p>
-                    <div className="flex flex-wrap gap-4">
-                      <span className="flex items-center gap-1.5 font-mono text-[11px] text-[#737373]">
-                        <Calendar size={12} strokeWidth={1.5} /> {ev.date}
-                      </span>
+              {upcoming.map((ev) => {
+                const RowTag = ev.link ? 'a' : 'div'
+                return (
+                  <RowTag
+                    key={ev.title}
+                    href={ev.link}
+                    target={ev.link ? '_blank' : undefined}
+                    rel={ev.link ? 'noopener noreferrer' : undefined}
+                    className="border-b border-[#111111] last:border-b-0 p-6 flex flex-col lg:flex-row gap-4 lg:items-start hover:bg-[#F5F5F5] transition-colors group cursor-pointer block text-inherit no-underline"
+                  >
+                    {ev.tag && (
+                      <div className="lg:w-32 shrink-0">
+                        <span className={`font-mono text-[10px] px-2 py-1 ${tagColors[ev.tag] || 'border border-[#111111] text-[#111111]'}`}>
+                          {ev.tag}
+                        </span>
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <h3 className="font-serif font-bold text-xl group-hover:text-[#CC0000] transition-colors leading-tight mb-2">
+                        {ev.title}
+                      </h3>
+                      {ev.desc && (
+                        <p className="font-body text-sm text-[#525252] leading-relaxed mb-3">{ev.desc}</p>
+                      )}
+                      <div className="flex flex-wrap gap-4">
+                        <span className="flex items-center gap-1.5 font-mono text-[11px] text-[#737373]">
+                          <Calendar size={12} strokeWidth={1.5} /> {ev.date}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <ExternalLink size={16} strokeWidth={1.5} className="text-[#A3A3A3] group-hover:text-[#111111] shrink-0 transition-colors mt-1" />
-                </div>
-              ))}
+                    {ev.link && (
+                      <ExternalLink size={16} strokeWidth={1.5} className="text-[#A3A3A3] group-hover:text-[#111111] shrink-0 transition-colors mt-1" />
+                    )}
+                  </RowTag>
+                )
+              })}
             </div>
           )}
 
@@ -120,16 +140,18 @@ export default function Events() {
                 key={ev.title}
                 className={`event-row reveal border-b border-[#E5E5E0] last:border-b-0 p-6 flex flex-col lg:flex-row gap-4 lg:items-start hover:bg-[#F5F5F5] transition-colors group cursor-pointer`}
               >
-                <div className="lg:w-32 shrink-0">
-                  <span className={`font-mono text-[10px] px-2 py-1 ${tagColors[ev.tag] || 'border border-[#E5E5E0] text-[#737373]'}`}>
-                    {ev.tag}
-                  </span>
-                </div>
+                {ev.tag && (
+                  <div className="lg:w-32 shrink-0">
+                    <span className={`font-mono text-[10px] px-2 py-1 ${tagColors[ev.tag] || 'border border-[#E5E5E0] text-[#737373]'}`}>
+                      {ev.tag}
+                    </span>
+                  </div>
+                )}
                 <div className="flex-1">
                   <h3 className="font-serif font-bold text-lg group-hover:text-[#CC0000] transition-colors leading-tight mb-1">
                     {ev.title}
                   </h3>
-                  <p className="font-body text-sm text-[#525252] leading-relaxed mb-2">{ev.desc}</p>
+                  {ev.desc && <p className="font-body text-sm text-[#525252] leading-relaxed mb-2">{ev.desc}</p>}
                   <div className="flex flex-wrap gap-4">
                     <span className="flex items-center gap-1.5 font-mono text-[11px] text-[#737373]">
                       <Calendar size={12} strokeWidth={1.5} /> {ev.date}
