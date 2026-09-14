@@ -13,6 +13,14 @@ interface EventItem {
 
 const events: EventItem[] = [
   {
+    tag: 'HACKATHON',
+    title: 'EnergyThon',
+    date: '18 September 2026',
+    desc: 'EnergyThon is an annual ideathon and hackathon by AEE-VIT during Gravitas, focusing on innovative, practical solutions to contemporary energy challenges.',
+    upcoming: true,
+    link: 'https://gravitas.vit.ac.in/events/8a0ff840-190a-44a3-bec1-e70a06b4d456',
+  },
+  {
     title: 'Drone Soccer',
     date: '18 September 2026',
     upcoming: true,
